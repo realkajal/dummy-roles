@@ -1,0 +1,15 @@
+
+---
+
+- name: user mem
+  hosts: all
+
+  tasks:
+    user: creating new_user
+    - name: Radhika
+      comment: this is new user of devops team
+      path: /home/Radhika
+      shell: /bin/bash
+      groups: devops,marketing
+      #state: absent
+      #remote: yes to remove user related data too 

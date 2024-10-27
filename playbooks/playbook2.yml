@@ -1,0 +1,27 @@
+
+---
+
+- name: copying file to remote
+  hosts: all
+
+  tasks:
+  - name: copy list
+    copy:
+      src: /etc/ansible/xyz.yml
+      dest: /tmp
+      owner: root
+      group: devops
+      mode: ug+rw
+      backup: true
+  - name : creating file
+  file:
+    path: /ec2-user/bjp.txt
+    state: touch
+    owner: root
+    group: devops
+    mode: u=rwx,g=rw,o=r
+ - name: creating a directory
+    file:
+     path: /home/mylife
+     state: directory
+

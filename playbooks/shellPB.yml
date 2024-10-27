@@ -1,0 +1,12 @@
+
+
+---
+
+- name: executing script and creating file
+  hosts: all
+
+  tasks:
+    shell: somescript.sh >> somelog.txt
+  args:
+    chdir: somedir/
+    creates: somelog.txt

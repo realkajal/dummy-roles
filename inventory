@@ -1,0 +1,21 @@
+
+# inventory file: hosts
+[webservers]
+
+ec2-user@ec2-13-201-19-166.ap-south-1.compute.amazonaws.com
+
+#[webservers]
+#203.0.113.111
+#203.0.113.112
+
+#[dbservers]
+#203.0.113.113
+#server_hostname
+
+#[development]
+#203.0.113.111
+#203.0.113.113
+
+#[production]
+#203.0.113.112
+#server_hostname

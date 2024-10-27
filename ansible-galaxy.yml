@@ -1,0 +1,9 @@
+
+---
+
+- hosts: all
+  user: ec2-user
+  become: true
+  roles:
+    - drpsychick.ansible-docker
+

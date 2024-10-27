@@ -1,0 +1,19 @@
+
+---
+
+- name: add crone job
+  hosts: all
+
+  tasks:
+   - name: add crone job
+     cron:
+       name: yum autoupdate
+      #state: absent
+       minute: 0
+       hour: 12
+       month: "*"
+       weekday: "*"
+       user: root
+       job: "YUMINTERACTIVE=0 /usr/sbin/yum-autoupdate"
+       cron_file: ansible_yum-autoupdate
+       disabled: yes

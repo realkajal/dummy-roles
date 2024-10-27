@@ -1,0 +1,11 @@
+
+---
+
+- name: to set passwd
+  hosts: all
+
+  task:
+    user:
+  - name: username
+     update_password: always
+     password: "{{'abc123' | password_hash('sha512')}}"

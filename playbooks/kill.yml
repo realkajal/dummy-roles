@@ -1,0 +1,15 @@
+
+
+---
+
+- name: kill a process
+  hosts: all
+
+  task:
+  - name: find a process and kill it
+    shell: "pidof nginx | xargs kill"
+    ignore_errors: yes
+
+  - name: to start nginx service
+    service: nginx
+    state: started

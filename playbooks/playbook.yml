@@ -1,0 +1,20 @@
+
+--- #this is my first playbook
+
+- name: basic playbook
+  user: ansible
+  become: yes
+  connection: ssh
+  host: all
+
+  tasks:
+    - name: installing nginx #this is only description
+      yum:
+        name: nginx
+        state: present
+   - name: starting nginx sever
+     service:
+       name: nginx
+       state: started
+       enabled: true
+
